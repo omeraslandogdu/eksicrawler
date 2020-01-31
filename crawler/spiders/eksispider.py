@@ -2,8 +2,8 @@
 import scrapy
 
 
-class UtubespiderSpider(scrapy.Spider):
-    name = 'utubespider'
+class EskiSpider(scrapy.Spider):
+    name = 'eksi'
     allowed_domains = ['https://eksisozluk.com/takip-edilesi-youtube-kanallari--2929069']
     start_urls = ['http://https://eksisozluk.com/takip-edilesi-youtube-kanallari--2929069/']
 
