@@ -6,9 +6,10 @@
 # https://doc.scrapy.org/en/latest/topics/items.html
 
 import scrapy
+from scrapy_djangoitem import DjangoItem
+
+from applications.eksicrawler.models import EksiModel
 
 
-class EksiItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+class EksiItem(DjangoItem):
+    django_model = EksiModel
