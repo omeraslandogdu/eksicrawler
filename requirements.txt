@@ -1,0 +1,7 @@
+psycopg2
+djangorestframework==3.10.2
+scrapy-djangoitem
+python-scrapyd-api
+Django==2.2.5
+Scrapy==1.7.3
+scrapyd==1.2.1
