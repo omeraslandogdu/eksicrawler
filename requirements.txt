@@ -1,4 +1,4 @@
-psycopg2
+psycopg2-binary
 djangorestframework==3.10.2
 scrapy-djangoitem
 python-scrapyd-api

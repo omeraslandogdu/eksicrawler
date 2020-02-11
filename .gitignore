@@ -111,3 +111,4 @@ venv.bak/
 
 #Docker
 .docker-mount/
+.vscode

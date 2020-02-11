@@ -20,7 +20,8 @@ RUN apt-get install -y python3 \
     binutils \
     libproj-dev \
     gdal-bin \
-    unzip
+    unzip \
+    curl
 
 RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
