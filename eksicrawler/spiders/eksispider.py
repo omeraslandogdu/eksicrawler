@@ -11,9 +11,9 @@ class EskiSpider(scrapy.Spider):
 
     def parse(self, response):
         item = EksiItem()
-        select = response.selector.css('#entry-item-list')
-        for sel in select:
-            item['author'] = sel.css('.footer > div.info > a.entry-author').extract_first()
-            item['url'] = sel.css('.project-title-text > a ::attr(href)').extract_first()
+        select = response.xpath('//*[@id="entry-item-list"]')
+        for sel in select.xpath('//li'):
+            item['author'] = sel.xpath('//footer/div[2]/a[2]').extract_first()
+            item['url'] = sel.xpath('//div[1]/a').extract_first()
             print(item)
             yield Request(response.url, callback=self.parse)
