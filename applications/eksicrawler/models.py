@@ -9,6 +9,14 @@ class EksiModel(BaseModel):
     author = models.CharField(max_length=255)
     url = models.URLField(max_length=255)
 
-    def save(self, force_insert=False, force_update=False, using=None,
-             update_fields=None):
-        pass
+    def eksi_save(self, data):
+        try:
+            eksimodel = EksiModel.create(
+                url=str(data['url']),
+                price=str(data['price']),
+                author=str(data['author']),
+                status=BaseModel.STATUS_ACTIVE
+            )
+            return dict(eksimodel)
+        except:
+            pass
