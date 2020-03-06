@@ -6,7 +6,7 @@ from eksicrawler.items import EksiItem
 
 class EskiSpider(scrapy.Spider):
     name = 'eksi'
-    allowed_domains = ['https://eksisozluk.com/']
+    allowed_domains = ['eksisozluk.com']
     start_urls = ['https://eksisozluk.com/takip-edilesi-youtube-kanallari--2929069/']
 
     def start_requests(self):
