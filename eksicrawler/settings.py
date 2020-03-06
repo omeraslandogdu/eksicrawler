@@ -12,6 +12,7 @@
 import django
 import os
 import sys
+from .utils import FakeChromeUA
 
 
 DJANGO_PROJECT_PATH = '/'
@@ -35,7 +36,7 @@ NEWSPIDER_MODULE = 'eksicrawler.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
+USER_AGENT = FakeChromeUA.get_ua()
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
