@@ -2,6 +2,6 @@ psycopg2-binary
 djangorestframework==3.10.2
 scrapy-djangoitem
 python-scrapyd-api
-Django==2.2.10
+Django==2.2.13
 Scrapy==1.7.3
 scrapyd==1.2.1
